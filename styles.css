@@ -500,9 +500,10 @@ html .site-canvas .hero .btn--primary:active{background:#e6e8ee;color:#2638f5}
 /* Native color emoji only in the examples explicitly requested. */
 .example-word{display:inline-flex;align-items:baseline;gap:.2em;white-space:nowrap;margin-right:.15em}
 .example-emoji{font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;font-style:normal;font-weight:400;font-size:.8em;letter-spacing:0;line-height:1}
-.grammar-correction{display:inline-grid;vertical-align:baseline}
-.grammar-correction>span{grid-area:1 / 1;position:relative}
-.grammar-mistake{display:none}
+.grammar-correction{display:inline-grid;grid-auto-flow:column;align-items:baseline;column-gap:.22em;vertical-align:baseline}
+.grammar-correction>span{position:relative}
+.grammar-mistake{color:var(--muted)}
+.grammar-mistake::after{content:"";position:absolute;left:-.04em;right:-.04em;top:55%;height:2px;background:currentColor;transform:scaleX(1);transform-origin:left center}
 
 @media(prefers-reduced-motion:no-preference){
  .hero-intro .name-line.marker-reveal::before{transform-origin:left center;animation:marker-draw 650ms cubic-bezier(.22,1,.36,1) 450ms both}
@@ -520,21 +521,18 @@ html .site-canvas .hero .btn--primary:active{background:#e6e8ee;color:#2638f5}
  html.is-theme-transitioning :is(.display,.hero-title,.audience-badge),html.is-theme-transitioning .name-line::before{transition:color 220ms ease-out,background-color 220ms ease-out,border-color 220ms ease-out}
  .grammar-correction.is-correction-ready .grammar-mistake{display:block;color:var(--muted)}
  .grammar-correction.is-correction-ready .grammar-correct{opacity:0}
- .grammar-mistake::after{content:"";position:absolute;left:-.04em;right:-.04em;top:55%;height:2px;background:currentColor;transform:scaleX(0);transform-origin:left center}
+ .grammar-correction.is-correction-ready .grammar-mistake::after{transform:scaleX(0)}
  .grammar-correction.is-correcting .grammar-mistake::after{animation:grammar-strike 300ms ease-out 900ms forwards}
- .grammar-correction.is-correcting .grammar-mistake{animation:grammar-erase 240ms ease-in 1350ms forwards}
  .grammar-correction.is-correcting .grammar-correct{animation:grammar-write 400ms cubic-bezier(.22,1,.36,1) 1550ms both}
  @keyframes grammar-strike{to{transform:scaleX(1)}}
- @keyframes grammar-erase{to{opacity:0;transform:translateY(-5px)}}
  @keyframes grammar-write{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 }
 @media(prefers-reduced-motion:reduce){
- .grammar-correction .grammar-mistake{display:none}
  .grammar-correction .grammar-correct{opacity:1;transform:none}
  .line-reveal{border-top-color:var(--line)}
  .line-reveal::after{display:none}
 }
-@media print{.grammar-correction .grammar-mistake{display:none!important}.grammar-correction .grammar-correct{opacity:1!important;transform:none!important}.line-reveal::after{transform:none!important}}
+@media print{.grammar-correction .grammar-correct{opacity:1!important;transform:none!important}.line-reveal::after{transform:none!important}}
 
 /* A quiet tools row within the practice section. Official marks, local SVGs. */
 .lesson-tools{border-top:1px solid var(--line);margin-top:28px;padding-top:32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
