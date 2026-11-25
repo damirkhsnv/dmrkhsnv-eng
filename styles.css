@@ -397,9 +397,9 @@ html{scroll-behavior:auto}
 .hero-fact{justify-self:start;max-width:240px;text-align:left}
 .hero-fact p{color:var(--ink);font-size:13px;line-height:1.6;white-space:pre-line;text-transform:uppercase;font-weight:700;max-width:210px;letter-spacing:0}
 .hero-description{font-size:16px;line-height:1.6;max-width:250px;text-align:right;justify-self:end}
-.hero .btn--primary{background:#fff;color:#2638f5;border:1px solid #e2e4ef;box-shadow:0 4px 16px #00000014;min-height:56px;font-size:14px;padding:16px 28px;justify-self:center}
-html .site-canvas .hero .btn--primary:is(:hover,:focus-visible){background:#f2f3f6;color:#2638f5;border-color:#c6cad8}
-html .site-canvas .hero .btn--primary:active{background:#e6e8ee;color:#2638f5}
+.hero .btn--primary{background:#2638f5;color:#fff;border:1px solid #2638f5;box-shadow:none;min-height:56px;font-size:14px;padding:16px 28px;justify-self:center}
+html .site-canvas .hero .btn--primary:is(:hover,:focus-visible){background:#1829d8;color:#fff;border-color:#1829d8}
+html .site-canvas .hero .btn--primary:active{background:#1221b8;color:#fff;border-color:#1221b8}
 @media(min-width:768px) and (max-width:1099px){
  .hero-intro{font-size:7vw}
  .hero-portrait{width:48vw;height:auto;max-width:520px}

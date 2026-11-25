@@ -29,7 +29,6 @@ const copy = {
     trainingWriting:"Академическое письмо",
     trainingExams:"Подготовка к ЕГЭ",
     trainingOnline:"Онлайн-преподавание",
-    trainingThinking:"Развитие критического мышления у учеников",
     trainingMotivation:"Работа с учебной мотивацией",
 
     navLabel:'Навигация',skip:'Перейти к содержанию',home:'Дамир, главная',themeLabel:'Сменить тему',lightTheme:'Включить светлую тему',darkTheme:'Включить тёмную тему',menuOpen:'Открыть меню',menuClose:'Закрыть меню',
@@ -78,7 +77,6 @@ const copy = {
     trainingWriting:"Academic writing",
     trainingExams:"Preparing learners for the Russian Unified State Exam (EGE)",
     trainingOnline:"Online teaching",
-    trainingThinking:"Developing learners’ critical thinking",
     trainingMotivation:"Supporting learners’ motivation",
 
     navLabel:'Navigation',skip:'Skip to content',home:'Damir, home',themeLabel:'Change the mode',lightTheme:'Switch to light theme',darkTheme:'Switch to dark theme',menuOpen:'Open menu',menuClose:'Close menu',
