@@ -1,8 +1,8 @@
-:root{color-scheme:light;--page:#ECECEE;--bg:#ECECEE;--ink:#101012;--muted:#5c5c64;--blue:#2638f5;--blue-hover:#1829d8;--line:#dcdce1;--surface:#f4f4f6;--serif:Georgia,"Times New Roman",serif;--sans:Arial,"Helvetica Neue",sans-serif;--ease:cubic-bezier(.2,.8,.2,1);--p-action:#2638f5}
-:root[data-theme=dark]{color-scheme:dark;--page:#111114;--bg:#111114;--ink:#f7f7fa;--muted:#b9b9c4;--line:#34343c;--surface:#1b1b20;--blue:#5261ff;--blue-hover:#7180ff}
+:root{color-scheme:light;--page:var(--bg);--bg:#fff;--ink:#101012;--muted:#5c5c64;--blue:#2638f5;--blue-hover:#1829d8;--line:#dcdce1;--surface:#f4f4f6;--serif:Georgia,"Times New Roman",serif;--sans:Arial,"Helvetica Neue",sans-serif;--ease:cubic-bezier(.2,.8,.2,1);--p-action:#2638f5}
+:root[data-theme=dark]{color-scheme:dark;--page:var(--bg);--bg:#111114;--ink:#f7f7fa;--muted:#b9b9c4;--line:#34343c;--surface:#1b1b20;--blue:#5261ff;--blue-hover:#7180ff}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:20px}
-body{margin:0;background:var(--page);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:20px;background:var(--bg);min-height:100%}
+body{margin:0;min-height:100svh;background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
 button,a{-webkit-tap-highlight-color:transparent}
 a{color:inherit}
 button{font:inherit;cursor:pointer}
@@ -476,3 +476,79 @@ html .site-canvas .hero .btn--primary:active{background:#e6e8ee;color:#2638f5}
  .contact-details .contact-button{width:100%;min-width:0}
  .contact-handle{align-self:center}
 }
+
+/* Requested heading treatment and balanced contact copy. */
+
+.contact-details>p{text-wrap:balance;word-break:normal;overflow-wrap:normal;hyphens:none}
+
+/* The root, overscroll area and footer share the active theme background. */
+@media(max-width:767px){.site-footer{padding-bottom:calc(24px + env(safe-area-inset-bottom, 0px))}}
+
+/* Text reveals once as it enters the viewport; content is visible without JS. */
+@media(prefers-reduced-motion:no-preference){
+ .scroll-reveal{transition:opacity 650ms cubic-bezier(.22,1,.36,1),transform 650ms cubic-bezier(.22,1,.36,1);transition-delay:var(--reveal-delay,0ms)}
+ .scroll-reveal.is-reveal-pending{opacity:0;transform:translate3d(0,20px,0)}
+}
+@media(prefers-reduced-motion:reduce){.scroll-reveal{opacity:1;transform:none;transition:none}}
+@media print{.scroll-reveal{opacity:1!important;transform:none!important;transition:none!important}}
+
+/* Practice uses one consistent heading style across both lines. */
+#lessons-title{color:var(--blue);font-family:var(--sans);font-weight:700;letter-spacing:-.04em;line-height:1.08}
+#lessons-title>span{display:block;font-family:inherit;font-style:normal;font-weight:inherit;font-size:1em;letter-spacing:inherit;line-height:inherit;color:inherit}
+#lessons-title .practice-heading-line{margin-top:8px}
+
+/* Native color emoji only in the examples explicitly requested. */
+.example-word{display:inline-flex;align-items:baseline;gap:.2em;white-space:nowrap;margin-right:.15em}
+.example-emoji{font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;font-style:normal;font-weight:400;font-size:.8em;letter-spacing:0;line-height:1}
+.grammar-correction{display:inline-grid;vertical-align:baseline}
+.grammar-correction>span{grid-area:1 / 1;position:relative}
+.grammar-mistake{display:none}
+
+@media(prefers-reduced-motion:no-preference){
+ .hero-intro .name-line.marker-reveal::before{transform-origin:left center;animation:marker-draw 650ms cubic-bezier(.22,1,.36,1) 450ms both}
+ @keyframes marker-draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+ .pill-pile .topic.scroll-reveal{transition:opacity 500ms cubic-bezier(.22,1,.36,1),transform 650ms cubic-bezier(.22,1,.36,1);transition-delay:var(--reveal-delay,0ms)}
+ .pill-pile .topic.scroll-reveal.is-reveal-pending{opacity:0;transform:translate3d(0,16px,0) rotate(var(--tilt,0deg))}
+ .line-reveal{position:relative;border-top-color:transparent}
+ .line-reveal::after{content:"";position:absolute;top:-1px;left:0;right:0;height:1px;background:var(--line);transform:scaleX(1);transform-origin:left center;transition:transform 750ms cubic-bezier(.22,1,.36,1);transition-delay:calc(var(--reveal-delay,0ms) + 120ms)}
+ .line-reveal.is-reveal-pending::after{transform:scaleX(0)}
+ .site-menu.is-menu-opening{animation:menu-open 200ms cubic-bezier(.22,1,.36,1) both}
+ .site-menu.is-menu-closing{animation:menu-close 160ms ease-in both;pointer-events:none}
+ @keyframes menu-open{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+ @keyframes menu-close{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-6px)}}
+ html.is-theme-transitioning,html.is-theme-transitioning body,html.is-theme-transitioning .site-canvas,html.is-theme-transitioning main>section,html.is-theme-transitioning .site-menu{transition:background-color 220ms ease-out,color 220ms ease-out,border-color 220ms ease-out}
+ html.is-theme-transitioning :is(.display,.hero-title,.audience-badge),html.is-theme-transitioning .name-line::before{transition:color 220ms ease-out,background-color 220ms ease-out,border-color 220ms ease-out}
+ .grammar-correction.is-correction-ready .grammar-mistake{display:block;color:var(--muted)}
+ .grammar-correction.is-correction-ready .grammar-correct{opacity:0}
+ .grammar-mistake::after{content:"";position:absolute;left:-.04em;right:-.04em;top:55%;height:2px;background:currentColor;transform:scaleX(0);transform-origin:left center}
+ .grammar-correction.is-correcting .grammar-mistake::after{animation:grammar-strike 300ms ease-out 900ms forwards}
+ .grammar-correction.is-correcting .grammar-mistake{animation:grammar-erase 240ms ease-in 1350ms forwards}
+ .grammar-correction.is-correcting .grammar-correct{animation:grammar-write 400ms cubic-bezier(.22,1,.36,1) 1550ms both}
+ @keyframes grammar-strike{to{transform:scaleX(1)}}
+ @keyframes grammar-erase{to{opacity:0;transform:translateY(-5px)}}
+ @keyframes grammar-write{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+}
+@media(prefers-reduced-motion:reduce){
+ .grammar-correction .grammar-mistake{display:none}
+ .grammar-correction .grammar-correct{opacity:1;transform:none}
+ .line-reveal{border-top-color:var(--line)}
+ .line-reveal::after{display:none}
+}
+@media print{.grammar-correction .grammar-mistake{display:none!important}.grammar-correction .grammar-correct{opacity:1!important;transform:none!important}.line-reveal::after{transform:none!important}}
+
+/* A quiet tools row within the practice section. Official marks, local SVGs. */
+.lesson-tools{border-top:1px solid var(--line);margin-top:28px;padding-top:32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.lesson-tools h3{font-size:22px;line-height:1.25;letter-spacing:-.5px;flex-shrink:0}
+.tools-equation,.tools-group,.service{display:flex;align-items:center}
+.tools-equation{gap:28px;flex-wrap:wrap}
+.tools-group{gap:14px;flex-wrap:wrap}
+.service{gap:9px;font-size:15px;line-height:1.4;white-space:nowrap}
+.service img{display:block;object-fit:contain;flex-shrink:0}
+.service-icon{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:32px;height:32px;border-radius:7px}
+.service-icon--telemost{background:#6deaa1}
+.service-icon--miro{background:#171719}
+.service-icon--holst{width:76px;background:#fff}
+.tools-or{font-size:13px;color:var(--muted)}
+.tools-plus{font-size:25px;font-weight:400;color:var(--blue);line-height:1}
+@media(max-width:1000px){.lesson-tools{align-items:flex-start;flex-direction:column}.tools-equation{gap:24px}}
+@media(max-width:600px){.lesson-tools{margin-top:12px;padding-top:28px;gap:24px}.tools-equation{flex-direction:column;align-items:flex-start;gap:16px}.tools-group{gap:10px}.service{font-size:14px;gap:7px}.tools-plus{margin-left:6px}}

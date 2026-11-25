@@ -1,0 +1,5 @@
+Official SVG sources, retrieved 2026-11-25. Logos remain property of their respective owners.
+Google Meet: https://www.gstatic.com/images/branding/productlogos/meet_2026/v2/web/192px.svg
+Miro: https://miro.com/ (inline SVG data-testid="miro-logo")
+Holst: https://holst.so/ (embedded SVG, decoded without changing paths)
+Yandex Telemost: https://telemost.yandex.ru/ (inline current-service SVG)

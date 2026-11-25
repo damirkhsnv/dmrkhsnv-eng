@@ -7,6 +7,7 @@
   <meta name="site-kind" content="other">
   <meta name="description" content="Английский онлайн с Дамиром для учеников 16+. Для работы, учёбы и хобби. Разговорная практика, видео, лексика и грамматика.">
   <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light dark">
   <meta property="og:title" content="Дамир | Английский онлайн 16+">
   <meta property="og:description" content="Английский для работы, учёбы и хобби. Занятия онлайн для учеников 16+.">
   <meta property="og:type" content="website">
@@ -15,10 +16,11 @@
   <title>Дамир | Английский онлайн 16+</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" as="image" href="assets/damir-cashmere.webp">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261125-4">
   <link rel="stylesheet" href="assets/motion/motion.css">
-  <script>try{if(localStorage.getItem('damir-editorial-theme')==='dark')document.documentElement.dataset.theme='dark';if(localStorage.getItem('damir-lang')==='en')document.documentElement.lang='en'}catch{}document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
-  <script src="app.js" defer></script>
+  <script>try{if(localStorage.getItem('damir-editorial-theme')==='dark')document.documentElement.dataset.theme='dark';if(localStorage.getItem('damir-lang')==='en')document.documentElement.lang='en'}catch{}document.querySelector('meta[name="theme-color"]').content=document.documentElement.dataset.theme==='dark'?'#111114':'#ffffff';document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+  <script src="app.js?v=20261125-4" defer></script>
+  <script src="assets/scroll-reveal.js?v=20261125-4" defer></script>
   <script src="assets/motion/motion.js" type="module"></script>
 </head>
 <body>
@@ -79,19 +81,35 @@
       </section>
       <section class="practice" id="lessons" aria-labelledby="lessons-title">
         <div class="wrap">
-        <div class="section-heading"><h2 id="lessons-title"><span class="display" data-i18n="lessonsTitle">ПРАКТИКА</span><em class="serif" data-i18n="lessonsItalic">на занятиях</em></h2><p class="section-intro" data-i18n="lessonsIntro">Тренируем речь, лексику и грамматику, чтобы говорить свободнее и быстрее подбирать нужные слова.</p></div>
+        <div class="section-heading"><h2 id="lessons-title"><span class="display" data-i18n="lessonsTitle">Практика</span><span class="practice-heading-line" data-i18n="lessonsItalic">на занятиях</span></h2><p class="section-intro" data-i18n="lessonsIntro">Тренируем речь, лексику и грамматику, чтобы говорить свободнее и быстрее подбирать нужные слова.</p></div>
         <div class="practice-grid">
-          <article class="practice-item"><h3 data-i18n="videoTitle">Видео и обсуждение</h3><p data-i18n="videoBody">Смотрим видео, разбираем содержание и полезные выражения. Обсуждаем идеи и детали услышанного.</p><span class="practice-example serif" aria-hidden="true">Watch. Notice. Discuss.</span></article>
+          <article class="practice-item"><h3 data-i18n="videoTitle">Видео и обсуждение</h3><p data-i18n="videoBody">Смотрим видео, разбираем содержание и полезные выражения. Обсуждаем идеи и детали услышанного.</p><span class="practice-example serif" aria-hidden="true"><span class="example-word">Watch.<span class="example-emoji">👀</span></span> <span class="example-word">Notice.<span class="example-emoji">🔎</span></span> <span class="example-word">Discuss.<span class="example-emoji">💬</span></span></span></article>
           <article class="practice-item"><h3 data-i18n="vocabTitle">Лексика в контексте</h3><p data-i18n="vocabBody">Разбираем слова и устойчивые сочетания. Используем их в диалогах, ответах на вопросы и ситуационных заданиях.</p><span class="practice-example serif" aria-hidden="true">Words in context.</span></article>
-          <article class="practice-item"><h3 data-i18n="grammarTitle">Грамматика на практике</h3><p data-i18n="grammarBody">Разбираем правила на примерах и закрепляем их в упражнениях. Отрабатываем конструкции в устной речи.</p><span class="practice-example serif" aria-hidden="true">I could have said it.</span></article>
-          <article class="practice-item"><h3 data-i18n="speakingTitle">Разговорная практика</h3><p data-i18n="speakingBody">Обсуждаем разные темы, аргументируем свою точку зрения, пересказываем истории и разыгрываем диалоги.</p><span class="practice-example serif" aria-hidden="true">What do you think?</span></article>
+          <article class="practice-item"><h3 data-i18n="grammarTitle">Грамматика на практике</h3><p data-i18n="grammarBody">Разбираем правила на примерах и закрепляем их в упражнениях. Отрабатываем конструкции в устной речи.</p><span class="practice-example serif" aria-hidden="true">I could <span class="grammar-correction"><span class="grammar-mistake">of</span><span class="grammar-correct">have</span></span> said it.</span></article>
+          <article class="practice-item"><h3 data-i18n="speakingTitle">Разговорная практика</h3><p data-i18n="speakingBody">Обсуждаем разные темы, аргументируем свою точку зрения, пересказываем истории и разыгрываем диалоги.</p><span class="practice-example serif" aria-hidden="true">What do you think? <span class="example-emoji">💭</span></span></article>
+        </div>
+        <div class="lesson-tools" aria-labelledby="tools-title">
+          <h3 id="tools-title" data-i18n="toolsTitle">Удобная связка</h3>
+          <div class="tools-equation">
+            <div class="tools-group">
+              <span class="service"><img src="assets/logos/google-meet.svg" width="28" height="28" alt="">Google Meet</span>
+              <span class="tools-or" data-i18n="toolsOr">или</span>
+              <span class="service"><span class="service-icon service-icon--telemost"><img src="assets/logos/yandex-telemost.svg" width="24" height="24" alt=""></span><span data-i18n="telemostName">Яндекс Телемост</span></span>
+            </div>
+            <span class="tools-plus" aria-hidden="true">+</span>
+            <div class="tools-group">
+              <span class="service"><span class="service-icon service-icon--miro"><img src="assets/logos/miro.svg" width="22" height="22" alt=""></span>Miro</span>
+              <span class="tools-or" data-i18n="toolsOr">или</span>
+              <span class="service"><span class="service-icon service-icon--holst"><img src="assets/logos/holst.svg?v=2" width="62" height="26" alt="Holst.so"></span></span>
+            </div>
+          </div>
         </div>
         </div>
       </section>
       <section class="format-section" id="format" aria-labelledby="format-title">
-        <div class="wrap format-layout"><div class="format-title-block"><p class="eyebrow" data-i18n="formatLabel">ФОРМАТ ОБУЧЕНИЯ</p><h2 id="format-title"><span data-i18n="formatTitle">Онлайн.</span><em class="serif" data-i18n="formatItalic">Вместе.</em></h2><span class="audience-badge">16+</span></div><div class="format-content"><div class="format-entry"><h3 data-i18n="boardTitle">Общая интерактивная доска</h3><p data-i18n="boardBody">Занятия проходят онлайн. На общей интерактивной доске работаем с текстами, выполняем задания и сохраняем примеры.</p></div><div class="format-entry"><h3 data-i18n="materialsTitle">Учебные материалы</h3><p data-i18n="materialsBody">В основе занятий лежат учебники, видео и задания на лексику, грамматику и речь. Дополнительные упражнения позволяют вернуться к сложной теме или подробнее отработать конкретный навык.</p></div></div></div>
+        <div class="wrap format-layout"><div class="format-title-block"><p class="eyebrow" data-i18n="formatLabel">ФОРМАТ ОБУЧЕНИЯ</p><h2 id="format-title"><span data-i18n="formatTitle">Онлайн.</span><em class="serif" data-i18n="formatItalic">Вместе!</em></h2><span class="audience-badge">16+</span></div><div class="format-content"><div class="format-entry"><h3 data-i18n="boardTitle">Общая интерактивная доска</h3><p data-i18n="boardBody">Занятия проходят онлайн. На общей интерактивной доске работаем с текстами, выполняем задания и сохраняем примеры.</p></div><div class="format-entry"><h3 data-i18n="materialsTitle">Учебные материалы</h3><p data-i18n="materialsBody">В основе занятий лежат учебники, видео и задания на лексику, грамматику и речь. Дополнительные упражнения позволяют вернуться к сложной теме или подробнее отработать конкретный навык.</p></div></div></div>
       </section>
-      <section class="contact-section blue-section" id="contact" aria-labelledby="contact-title"><div class="wrap contact-layout"><h2 id="contact-title"><span data-i18n="contactTitle">ОБСУДИМ</span><em class="serif" data-i18n="contactItalic">занятия</em></h2><div class="contact-details"><p data-i18n="contactBody">Задать вопрос или записаться на занятие можно удобным способом связи.</p><div class="contact-methods" aria-label="Способы связи" data-i18n-aria="contactMethodsLabel"><a class="btn contact-button" href="https://t.me/yarnnay" target="_blank" rel="noopener noreferrer" aria-label="Написать @yarnnay в Telegram" data-i18n-aria="telegramLabel" data-i18n="telegramAction">Написать в Telegram</a><span class="contact-handle">@yarnnay</span></div></div></div></section>
+      <section class="contact-section blue-section" id="contact" aria-labelledby="contact-title"><div class="wrap contact-layout"><h2 id="contact-title"><span data-i18n="contactTitle">ОБСУДИМ</span><em class="serif" data-i18n="contactItalic">занятия?</em></h2><div class="contact-details"><p data-i18n="contactBody">Задать вопрос или записаться на занятие можно удобным способом связи.</p><div class="contact-methods" aria-label="Способы связи" data-i18n-aria="contactMethodsLabel"><a class="btn contact-button" href="https://t.me/yarnnay" target="_blank" rel="noopener noreferrer" aria-label="Написать @yarnnay в Telegram" data-i18n-aria="telegramLabel" data-i18n="telegramAction">Написать в Telegram</a><span class="contact-handle">@yarnnay</span></div></div></div></section>
     </main>
     <footer class="site-footer wrap"><a class="wordmark" href="#main" aria-label="Дамир, главная" data-i18n-aria="home">dk<span>.</span></a><span data-i18n="footer">Дамир · Английский онлайн</span><a class="footer-top" href="#main" data-i18n="backTop">Наверх</a></footer>
   </div>

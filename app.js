@@ -1,5 +1,6 @@
 const copy = {
   ru: {
+    toolsTitle:"Удобная связка",toolsOr:"или",telemostName:"Яндекс Телемост",
     navAudience:"Кому подойдут занятия",
     audienceTitle:"КОМУ ПОДОЙДУТ",
     audienceItalic:"занятия",
@@ -37,17 +38,18 @@ const copy = {
     heroDescription:'Для работы, учёбы и хобби. Практика общения, видео и язык в контексте.',contactAction:'Записаться на занятие',
     goalsTitle:'ДЛЯ ТВОИХ',goalsItalic:'целей и амбиций',goalsBody:'Английский для работы, учёбы и хобби. Темы и материалы зависят от твоего уровня, интересов и задач.',ageMark:'ЗАНЯТИЯ 16+',ageLabel:'Для учеников',topics:'Темы и направления',
     topicWork:'Работа',topicStudy:'Учёба',topicHobby:'Хобби',topicVideo:'Видео',topicSpeaking:'Общение',topicVocab:'Лексика',topicGrammar:'Грамматика',topicOnline:'Онлайн',topicTravel:'Путешествия',topicFilms:'Кино',topicMusic:'Музыка',topicReading:'Чтение',topicDialogues:'Диалоги',topicStories:'Истории',
-    lessonsTitle:'ПРАКТИКА',lessonsItalic:'на занятиях',lessonsIntro:'Тренируем речь, лексику и грамматику, чтобы говорить свободнее и быстрее подбирать нужные слова.',
+    lessonsTitle:'Практика',lessonsItalic:'на занятиях',lessonsIntro:'Тренируем речь, лексику и грамматику, чтобы говорить свободнее и быстрее подбирать нужные слова.',
     videoTitle:'Видео и обсуждение',videoBody:'Смотрим видео, разбираем содержание и полезные выражения. Обсуждаем идеи и детали услышанного.',
     vocabTitle:'Лексика в контексте',vocabBody:'Разбираем слова и устойчивые сочетания. Используем их в диалогах, ответах на вопросы и ситуационных заданиях.',
     grammarTitle:'Грамматика на практике',grammarBody:'Разбираем правила на примерах и закрепляем их в упражнениях. Отрабатываем конструкции в устной речи.',
     speakingTitle:'Разговорная практика',speakingBody:'Обсуждаем разные темы, аргументируем свою точку зрения, пересказываем истории и разыгрываем диалоги.',
-    formatLabel:'ФОРМАТ ОБУЧЕНИЯ',formatTitle:'Онлайн.',formatItalic:'Вместе.',boardTitle:'Общая интерактивная доска',boardBody:'Занятия проходят онлайн. На общей интерактивной доске работаем с текстами, выполняем задания и сохраняем примеры.',
+    formatLabel:'ФОРМАТ ОБУЧЕНИЯ',formatTitle:'Онлайн.',formatItalic:'Вместе!',boardTitle:'Общая интерактивная доска',boardBody:'Занятия проходят онлайн. На общей интерактивной доске работаем с текстами, выполняем задания и сохраняем примеры.',
     materialsTitle:'Учебные материалы',materialsBody:'В основе занятий лежат учебники, видео и задания на лексику, грамматику и речь. Дополнительные упражнения позволяют вернуться к сложной теме или подробнее отработать конкретный навык.',
-    contactTitle:'ОБСУДИМ',contactItalic:'занятия',contactBody:'Задать вопрос или записаться на занятие можно удобным способом связи.',contactMethodsLabel:'Способы связи',telegramLabel:'Написать @yarnnay в Telegram',telegramAction:'Написать в Telegram',footer:'Дамир · Английский онлайн',backTop:'Наверх',
+    contactTitle:'ОБСУДИМ',contactItalic:'занятия?',contactBody:'Задать вопрос или записаться на занятие можно удобным способом связи.',contactMethodsLabel:'Способы связи',telegramLabel:'Написать @yarnnay в Telegram',telegramAction:'Написать в Telegram',footer:'Дамир · Английский онлайн',backTop:'Наверх',
     portraitAlt:'Дамир, преподаватель английского',pageTitle:'Дамир | Английский онлайн 16+',description:'Английский онлайн с Дамиром для учеников 16+. Для работы, учёбы и хобби. Разговорная практика, видео, лексика и грамматика.'
   },
   en: {
+    toolsTitle:"A simple setup",toolsOr:"or",telemostName:"Yandex Telemost",
     navAudience:"Who lessons are for",
     audienceTitle:"WHO LESSONS",
     audienceItalic:"are for",
@@ -85,14 +87,14 @@ const copy = {
     heroDescription:'For work, study and hobbies. Speaking practice, video and language in context.',contactAction:'Book a lesson',
     goalsTitle:'FOR YOUR',goalsItalic:'goals and ambitions',goalsBody:'English for work, study and hobbies. Topics and materials depend on your level, interests and goals.',ageMark:'LESSONS 16+',ageLabel:'Learners',topics:'Topics and goals',
     topicWork:'Work',topicStudy:'Study',topicHobby:'Hobbies',topicVideo:'Video',topicSpeaking:'Speaking',topicVocab:'Vocabulary',topicGrammar:'Grammar',topicOnline:'Online',topicTravel:'Travel',topicFilms:'Films',topicMusic:'Music',topicReading:'Reading',topicDialogues:'Dialogues',topicStories:'Stories',
-    lessonsTitle:'PRACTICE',lessonsItalic:'in lessons',lessonsIntro:'Practise speaking, vocabulary and grammar to speak more freely and find the words you need more quickly.',
+    lessonsTitle:'Practice',lessonsItalic:'in lessons',lessonsIntro:'Practise speaking, vocabulary and grammar to speak more freely and find the words you need more quickly.',
     videoTitle:'Video and discussion',videoBody:'Watch videos, work through the content and pick out useful expressions. Discuss the ideas and details.',
     vocabTitle:'Vocabulary in context',vocabBody:'Study words and common phrases. Use them in dialogues, answers to questions and situational activities.',
     grammarTitle:'Grammar in practice',grammarBody:'Work through grammar using examples and exercises. Practise the structures in spoken English.',
     speakingTitle:'Speaking practice',speakingBody:'Discuss different topics, explain your point of view, retell stories and role-play conversations.',
-    formatLabel:'LESSON FORMAT',formatTitle:'Online.',formatItalic:'Together.',boardTitle:'A shared interactive board',boardBody:'Lessons take place online. We use a shared interactive board to work with texts, complete activities and keep examples.',
+    formatLabel:'LESSON FORMAT',formatTitle:'Online.',formatItalic:'Together!',boardTitle:'A shared interactive board',boardBody:'Lessons take place online. We use a shared interactive board to work with texts, complete activities and keep examples.',
     materialsTitle:'Lesson materials',materialsBody:'Lessons use coursebooks, videos and activities for vocabulary, grammar and speaking. Additional exercises provide more practice with a difficult topic or a specific skill.',
-    contactTitle:'LET’S TALK',contactItalic:'about lessons',contactBody:'Choose a convenient way to ask a question or book a lesson.',contactMethodsLabel:'Ways to get in touch',telegramLabel:'Message @yarnnay on Telegram',telegramAction:'Message on Telegram',footer:'Damir · English online',backTop:'Back to top',
+    contactTitle:'LET’S TALK',contactItalic:'about lessons?',contactBody:'Choose a convenient way to ask a question or book a lesson.',contactMethodsLabel:'Ways to get in touch',telegramLabel:'Message @yarnnay on Telegram',telegramAction:'Message on Telegram',footer:'Damir · English online',backTop:'Back to top',
     portraitAlt:'Damir, English teacher',pageTitle:'Damir | English online 16+',description:'Online English with Damir for learners aged 16+. For work, study and hobbies. Speaking practice, video, vocabulary and grammar.'
   }
 };
@@ -100,12 +102,28 @@ let language=document.documentElement.lang==='en'?'en':'ru';
 const themeButton=document.querySelector('[data-theme-toggle]');
 const menuButton=document.querySelector('[data-menu-toggle]');
 const menu=document.querySelector('#site-menu');
+let menuCloseTimer;
+let themeTransitionTimer;
+const reduceMotion=()=>window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 function updateControls(){
   themeButton.setAttribute('aria-label',copy[language][document.documentElement.dataset.theme==='dark'?'lightTheme':'darkTheme']);
-  menuButton.setAttribute('aria-label',copy[language][menu.hidden?'menuOpen':'menuClose']);
+  menuButton.setAttribute('aria-label',copy[language][menuButton.getAttribute('aria-expanded')==='true'?'menuClose':'menuOpen']);
   document.querySelector('meta[name="theme-color"]').content=document.documentElement.dataset.theme==='dark'?'#111114':'#ffffff';
 }
-function closeMenu(returnFocus=false){menu.hidden=true;menuButton.setAttribute('aria-expanded','false');updateControls();if(returnFocus)menuButton.focus();}
+function closeMenu(returnFocus=false){
+  clearTimeout(menuCloseTimer);
+  menuButton.setAttribute('aria-expanded','false');
+  menu.classList.remove('is-menu-opening');
+  if(reduceMotion()||menu.hidden){menu.hidden=true;menu.classList.remove('is-menu-closing');}
+  else{menu.classList.add('is-menu-closing');menuCloseTimer=setTimeout(()=>{menu.hidden=true;menu.classList.remove('is-menu-closing');},160);}
+  updateControls();if(returnFocus)menuButton.focus();
+}
+function openMenu(){
+  clearTimeout(menuCloseTimer);menu.hidden=false;
+  menu.classList.remove('is-menu-closing');
+  if(!reduceMotion())menu.classList.add('is-menu-opening');
+  menuButton.setAttribute('aria-expanded','true');updateControls();
+}
 function setLanguage(next,remember=true){
   if(!copy[next])return;language=next;document.documentElement.lang=next;
   document.querySelectorAll('[data-i18n]').forEach(el=>{const text=copy[next][el.dataset.i18n];if(text!==undefined)el.textContent=text;});
@@ -119,8 +137,16 @@ function setLanguage(next,remember=true){
   updateControls();if(remember){try{localStorage.setItem('damir-lang',next)}catch{}}
 }
 document.querySelectorAll('[data-language]').forEach(el=>el.addEventListener('click',()=>setLanguage(el.dataset.language)));
-themeButton.addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{localStorage.setItem('damir-editorial-theme',next)}catch{}updateControls();});
-menuButton.addEventListener('click',()=>{menu.hidden=!menu.hidden;menuButton.setAttribute('aria-expanded',String(!menu.hidden));updateControls();});
+themeButton.addEventListener('click',()=>{
+  clearTimeout(themeTransitionTimer);
+  if(!reduceMotion())document.documentElement.classList.add('is-theme-transitioning');
+  const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  document.documentElement.dataset.theme=next;
+  try{localStorage.setItem('damir-editorial-theme',next)}catch{}
+  updateControls();
+  themeTransitionTimer=setTimeout(()=>document.documentElement.classList.remove('is-theme-transitioning'),280);
+});
+menuButton.addEventListener('click',()=>{if(menuButton.getAttribute('aria-expanded')==='true')closeMenu();else openMenu();});
 menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>closeMenu()));
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!menu.hidden)closeMenu(true);});
 document.addEventListener('click',event=>{if(!menu.hidden&&!menu.contains(event.target)&&!menuButton.contains(event.target))closeMenu();});
